@@ -19,3 +19,11 @@ def start_command_sub(command):
     
     return(stdout.decode() + stderr.decode())
     
+
+def read_signature():
+    process = subprocess.Popen(["avrdude","-c", "usbasp", "-p", "m32"],stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+
+    stdout, stderr = process.communicate()
+    # return process.communicate()
+    
+    return(stdout.decode() + stderr.decode())
