@@ -7,9 +7,6 @@ def start_command_os(command):
     return stream.read()
 
 
-
-
-
 def start_command_sub(command):
     process = subprocess.Popen(command.split(" "),
                         stdout=subprocess.PIPE, 
