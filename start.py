@@ -7,7 +7,7 @@ def cmd_start():
     
 def read_uc():
     rep = read_signature()
-    text.insert("0.0", rep + "\n")
+    text.insert("0.0", rep + "\n\n")
 
 window = tk.Tk()
 
